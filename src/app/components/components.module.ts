@@ -7,11 +7,13 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SearchComponent } from './search/search.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from '../app-routing.module';
+import { CardUserComponent } from './card-user/card-user.component';
 
 @NgModule({
     declarations: [
         SearchComponent,
-        NavbarComponent
+        NavbarComponent,
+        CardUserComponent
     ],
     imports: [
         CommonModule,
@@ -21,7 +23,8 @@ import { AppRoutingModule } from '../app-routing.module';
         AppRoutingModule
     ], exports: [
         SearchComponent,
-        NavbarComponent
+        NavbarComponent,
+        CardUserComponent
     ]
 })
 export class ComponentsModule { }

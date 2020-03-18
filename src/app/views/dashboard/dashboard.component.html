@@ -1,0 +1,13 @@
+<!-- <div class="card-columns">
+    <div class="card" *ngFor="let user of users">
+      <img [src]="user.avatar_url" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{user.login}}</h5>
+        <p class="card-text">{{user.url}}</p>
+      </div>
+    </div>
+</div>
+ -->
+
+ <app-card-user [user]="user" *ngFor="let user of users"></app-card-user>
+

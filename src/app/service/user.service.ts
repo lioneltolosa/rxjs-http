@@ -26,4 +26,8 @@ export class UserService {
                 )
         }
     }
+
+    getUsers() {
+        return this.http.get('https://api.github.com/users?per_page=30');
+    }
 }
