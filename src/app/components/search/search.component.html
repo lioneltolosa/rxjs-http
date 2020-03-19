@@ -7,12 +7,4 @@
     </form>
 </section>
 
-<div class="card-columns">
-    <div class="card" *ngFor="let i of searhResults">
-        <img [src]="i.owner.avatar_url" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title">{{i.full_name}}</h5>
-            <p class="card-text">{{i.description}}</p>
-        </div>
-    </div>
-</div>
+<app-card-repositories [i]="i" *ngFor="let i of searhResults"></app-card-repositories>

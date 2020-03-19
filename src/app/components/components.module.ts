@@ -8,12 +8,14 @@ import { SearchComponent } from './search/search.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { CardUserComponent } from './card-user/card-user.component';
+import { CardRepositoriesComponent } from './card-repositories/card-repositories.component';
 
 @NgModule({
     declarations: [
         SearchComponent,
         NavbarComponent,
-        CardUserComponent
+        CardUserComponent,
+        CardRepositoriesComponent
     ],
     imports: [
         CommonModule,
@@ -24,7 +26,8 @@ import { CardUserComponent } from './card-user/card-user.component';
     ], exports: [
         SearchComponent,
         NavbarComponent,
-        CardUserComponent
+        CardUserComponent,
+        CardRepositoriesComponent
     ]
 })
 export class ComponentsModule { }
