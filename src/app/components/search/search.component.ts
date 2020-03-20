@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { UserService } from 'src/app/service/user.service';
 import { Subject, throwError } from 'rxjs';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -10,6 +10,8 @@ import { map, debounceTime, distinctUntilChanged, switchMap, catchError } from '
     styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit {
+
+    @Input() i : any;
 
     public searchTerm = new Subject<string>();
     public loading: boolean;

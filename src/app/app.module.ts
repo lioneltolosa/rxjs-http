@@ -9,13 +9,15 @@ import { ComponentsModule } from './components/components.module';
 import { HomeComponent } from './views/home/home.component';
 import { UserComponent } from './views/user/user.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
+import { TableListComponent } from './views/table-list/table-list.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         HomeComponent,
         UserComponent,
-        DashboardComponent
+        DashboardComponent,
+        TableListComponent
     ],
     imports: [
         BrowserModule,

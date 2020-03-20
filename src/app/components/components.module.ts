@@ -9,13 +9,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { AppRoutingModule } from '../app-routing.module';
 import { CardUserComponent } from './card-user/card-user.component';
 import { CardRepositoriesComponent } from './card-repositories/card-repositories.component';
+import { TableRepositoriesComponent } from './table-repositories/table-repositories.component';
 
 @NgModule({
     declarations: [
         SearchComponent,
         NavbarComponent,
         CardUserComponent,
-        CardRepositoriesComponent
+        CardRepositoriesComponent,
+        TableRepositoriesComponent
     ],
     imports: [
         CommonModule,
@@ -27,7 +29,8 @@ import { CardRepositoriesComponent } from './card-repositories/card-repositories
         SearchComponent,
         NavbarComponent,
         CardUserComponent,
-        CardRepositoriesComponent
+        CardRepositoriesComponent,
+        TableRepositoriesComponent
     ]
 })
 export class ComponentsModule { }
