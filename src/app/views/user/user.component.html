@@ -1,1 +1,15 @@
-<app-search></app-search>
+<form>
+    <div class="row">
+        <div class="col">
+            <input type="text" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+            <app-search (searhResultsUsers)="searhResults = $event"></app-search>
+        </div>
+    </div>
+</form>
+<div class="card-columns">
+    <app-card-repositories [i]="i" 
+                           *ngFor="let i of searhResults">
+    </app-card-repositories>
+</div>

@@ -27,6 +27,10 @@ export class UserService {
         }
     }
 
+    getEntries(term) {
+        this.getSearchEntries(term)
+    }
+
     getUsers() {
         return this.http.get('https://api.github.com/users?per_page=30');
     }

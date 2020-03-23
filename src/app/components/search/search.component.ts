@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { UserService } from 'src/app/service/user.service';
 import { Subject, throwError } from 'rxjs';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
@@ -12,6 +12,8 @@ import { map, debounceTime, distinctUntilChanged, switchMap, catchError } from '
 export class SearchComponent implements OnInit {
 
     @Input() i : any;
+    @Output() searhResultsUsers = new EventEmitter<any>();
+
 
     public searchTerm = new Subject<string>();
     public loading: boolean;
@@ -44,8 +46,9 @@ export class SearchComponent implements OnInit {
                 this.errorMessage = e.message;
                 return throwError(e);
             }),
-        ).subscribe(users => {
+        ).subscribe((users: any) => {
             this.searhResults = users;
+            this.searhResultsUsers.emit(this.searhResults)
             console.log('users', users);
         })
     }
