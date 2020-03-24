@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { pluck, map } from 'rxjs/operators';
-import { Observable, empty } from 'rxjs';
+import { Observable, empty, of } from 'rxjs';
 import { ajax } from 'rxjs/ajax';
+import { USERS } from '../mock-data';
 
 
 @Injectable({
@@ -40,5 +41,9 @@ export class UserService {
         const url = 'https://api.github.com/users?per_page=30';
 
         return ajax.getJSON(url);
+    }
+
+    getMock() {
+        return of(USERS)
     }
 }

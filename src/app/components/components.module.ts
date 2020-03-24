@@ -10,6 +10,7 @@ import { AppRoutingModule } from '../app-routing.module';
 import { CardUserComponent } from './card-user/card-user.component';
 import { CardRepositoriesComponent } from './card-repositories/card-repositories.component';
 import { TableRepositoriesComponent } from './table-repositories/table-repositories.component';
+import { OutputComponent } from './output/output.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { TableRepositoriesComponent } from './table-repositories/table-repositor
         NavbarComponent,
         CardUserComponent,
         CardRepositoriesComponent,
-        TableRepositoriesComponent
+        TableRepositoriesComponent,
+        OutputComponent
     ],
     imports: [
         CommonModule,
@@ -30,7 +32,8 @@ import { TableRepositoriesComponent } from './table-repositories/table-repositor
         NavbarComponent,
         CardUserComponent,
         CardRepositoriesComponent,
-        TableRepositoriesComponent
+        TableRepositoriesComponent,
+        OutputComponent
     ]
 })
 export class ComponentsModule { }

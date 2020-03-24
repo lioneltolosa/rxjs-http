@@ -11,6 +11,7 @@ import { UserComponent } from './views/user/user.component';
 import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { TableListComponent } from './views/table-list/table-list.component';
 import { FilterComponent } from './views/filter/filter.component';
+import { InputOutputComponent } from './views/input-output/input-output.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { FilterComponent } from './views/filter/filter.component';
         UserComponent,
         DashboardComponent,
         TableListComponent,
-        FilterComponent
+        FilterComponent,
+        InputOutputComponent
     ],
     imports: [
         BrowserModule,
