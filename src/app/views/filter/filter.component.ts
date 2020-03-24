@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, of, combineLatest } from 'rxjs';
-import { State, states } from 'src/states';
+import { Observable, combineLatest } from 'rxjs';
 import { FormControl } from '@angular/forms';
 import { startWith, map } from 'rxjs/operators';
+import { ajax } from 'rxjs/ajax';
 
 @Component({
     selector: 'app-filter',
@@ -11,15 +11,17 @@ import { startWith, map } from 'rxjs/operators';
 })
 export class FilterComponent implements OnInit {
 
-    states$: Observable<State[]>;
-    filteredStates$: Observable<State[]>;
+    states$: Observable<any>;
+    filteredStates$: Observable<any>;
     filter: FormControl;
     filter$: Observable<string>;
 
     constructor() {}
 
     filterStates() {
-        this.states$ = of(states);
+        const url = 'https://jsonplaceholder.typicode.com/users';
+
+        this.states$ = ajax.getJSON(url);
         this.filter = new FormControl('');
         this.filter$ = this.filter.valueChanges.pipe(startWith(''));
         this.filteredStates$ = combineLatest(this.states$, this.filter$)
@@ -27,9 +29,8 @@ export class FilterComponent implements OnInit {
                 map(([states, filterString]) => states.filter(state => state.name.toLowerCase().indexOf(filterString.toLowerCase()) !== -1))
         );
     }
-
+ 
     ngOnInit(): void {
         this.filterStates();
     }
-
 }

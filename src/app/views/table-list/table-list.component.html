@@ -1,15 +1,8 @@
+<input type="text" [formControl]="filter" placeholder="Filter states...">
+
 <div class="content-table">
     <table class="table">
         <thead>
-            <!-- <tr>
-                <th>
-                    
-                    <div class="sort-icon">
-                        <i class="fas fa-sort-up"></i>
-                        <i class="fas fa-sort-down"></i>
-                    </div>
-                </th>
-            </tr> -->
             <tr>
                 <th scope="col">#</th>
                 <th scope="col">Name</th>
@@ -17,7 +10,7 @@
               </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let i of userResults">
+            <tr *ngFor="let i of filteredStates$ | async">
                 <td>{{i.login}}</td>
                 <td>{{i.url}}</td>
                 <td> 
@@ -26,8 +19,4 @@
             </tr>
         </tbody>
     </table>
-    <!-- <span class="message-filter d-flex justify-content-center"
-          *ngIf="searchTerm">
-        !!Sorry there are no results with this search
-    </span> -->
 </div>

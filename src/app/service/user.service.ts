@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { pluck, map } from 'rxjs/operators';
 import { Observable, empty } from 'rxjs';
+import { ajax } from 'rxjs/ajax';
 
 
 @Injectable({
@@ -33,5 +34,11 @@ export class UserService {
 
     getUsers() {
         return this.http.get('https://api.github.com/users?per_page=30');
+    }
+
+    getUsersWithAjaxGetJson() {
+        const url = 'https://api.github.com/users?per_page=30';
+
+        return ajax.getJSON(url);
     }
 }
