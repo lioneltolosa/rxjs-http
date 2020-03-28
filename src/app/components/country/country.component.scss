@@ -1,0 +1,13 @@
+.pagination {
+    .page-link {
+        
+        cursor: pointer;
+    }
+
+    .disabled-button {
+        pointer-events: none;
+        cursor: default;
+        text-decoration: none;
+        color: black;
+    }
+}

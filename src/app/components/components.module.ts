@@ -11,6 +11,7 @@ import { CardUserComponent } from './card-user/card-user.component';
 import { CardRepositoriesComponent } from './card-repositories/card-repositories.component';
 import { TableRepositoriesComponent } from './table-repositories/table-repositories.component';
 import { OutputComponent } from './output/output.component';
+import { CountryComponent } from './country/country.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { OutputComponent } from './output/output.component';
         CardUserComponent,
         CardRepositoriesComponent,
         TableRepositoriesComponent,
-        OutputComponent
+        OutputComponent,
+        CountryComponent
     ],
     imports: [
         CommonModule,
@@ -33,7 +35,8 @@ import { OutputComponent } from './output/output.component';
         CardUserComponent,
         CardRepositoriesComponent,
         TableRepositoriesComponent,
-        OutputComponent
+        OutputComponent,
+        CountryComponent
     ]
 })
 export class ComponentsModule { }
