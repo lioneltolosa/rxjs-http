@@ -12,6 +12,10 @@ import { CardRepositoriesComponent } from './card-repositories/card-repositories
 import { TableRepositoriesComponent } from './table-repositories/table-repositories.component';
 import { OutputComponent } from './output/output.component';
 import { CountryComponent } from './country/country.component';
+import { CustomersComponent } from './customers/customers.component';
+import { CustomersListComponent } from './customers-list/customers-list.component';
+import { FilterTextboxComponent } from './filter-textbox/filter-textbox.component';
+import { CapitalizePipe } from '../pipes/capitalize.pipe';
 
 @NgModule({
     declarations: [
@@ -21,7 +25,11 @@ import { CountryComponent } from './country/country.component';
         CardRepositoriesComponent,
         TableRepositoriesComponent,
         OutputComponent,
-        CountryComponent
+        CountryComponent,
+        CustomersComponent,
+        CustomersListComponent,
+        FilterTextboxComponent,
+        CapitalizePipe
     ],
     imports: [
         CommonModule,
@@ -36,7 +44,11 @@ import { CountryComponent } from './country/country.component';
         CardRepositoriesComponent,
         TableRepositoriesComponent,
         OutputComponent,
-        CountryComponent
+        CountryComponent,
+        CustomersComponent,
+        CustomersListComponent,
+        FilterTextboxComponent,
+        CapitalizePipe
     ]
 })
 export class ComponentsModule { }

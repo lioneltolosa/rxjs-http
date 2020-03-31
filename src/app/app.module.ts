@@ -12,6 +12,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { TableListComponent } from './views/table-list/table-list.component';
 import { FilterComponent } from './views/filter/filter.component';
 import { InputOutputComponent } from './views/input-output/input-output.component';
+import { ScrimbaListComponent } from './views/scrimba-list/scrimba-list.component';
 
 @NgModule({
     declarations: [
@@ -21,7 +22,8 @@ import { InputOutputComponent } from './views/input-output/input-output.componen
         DashboardComponent,
         TableListComponent,
         FilterComponent,
-        InputOutputComponent
+        InputOutputComponent,
+        ScrimbaListComponent,
     ],
     imports: [
         BrowserModule,
