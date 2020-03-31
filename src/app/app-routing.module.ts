@@ -6,6 +6,7 @@ import { DashboardComponent } from './views/dashboard/dashboard.component';
 import { TableListComponent } from './views/table-list/table-list.component';
 import { FilterComponent } from './views/filter/filter.component';
 import { InputOutputComponent } from './views/input-output/input-output.component';
+import { ScrimbaListComponent } from './views/scrimba-list/scrimba-list.component';
 
 const routes: Routes = [
     { path: 'home', component: HomeComponent },
@@ -14,6 +15,7 @@ const routes: Routes = [
     { path: 'table-list', component: TableListComponent },
     { path: 'filter-rxjs', component: FilterComponent },
     { path: 'input-output', component: InputOutputComponent },
+    { path: 'scrimba-list', component: ScrimbaListComponent },
 
 ];
 
